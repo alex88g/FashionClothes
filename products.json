@@ -1,0 +1,142 @@
+[
+    {
+        "id": "1",
+        "name": "JDY",
+        "price": 518,
+        "img": "https://img01.ztat.net/article/spp-media-p1/03f0225c70694e3381ba3efeaf807f0b/76730c92b96545df97dd6707db8c9189.jpg?imwidth=1800",
+        "description": "JDYNEWHAZEL SHINE - Tunn jacka - kalmata"
+    },
+    {
+        "id": "2",
+        "name": "Levi's®",
+        "price": 1955,
+        "img": "https://img01.ztat.net/article/spp-media-p1/ef0b468f15054d18827643ca9330a788/e5c3c4af70b640508179495ccd7a4416.jpg?imwidth=762",
+        "description": "SHERPA - Jacka i konstläder - black"
+    },
+    {
+        "id": "3",
+        "name": "Levi's®",
+        "price": 791,
+        "img": "https://img01.ztat.net/article/spp-media-p1/15f495479f8d4dc7b173e5eac3c20ec8/99f92463626a42b596190c159acff710.jpg?imwidth=762",
+        "description": "HOODED TRUCKER - Jeansjacka - tiger's eye"
+    },
+    {
+        "id": "4",
+        "name": "Brandit",
+        "price": 1245,
+        "img": "https://img01.ztat.net/article/spp-media-p1/5b393c547fcc3ea598f5deda7cba4d8a/da9c056ac3b64ac48ff84e9556a33221.jpg?imwidth=1800",
+        "description": "BRONX - Allvädersjacka - olive"
+    },
+    {
+        "id": "5",
+        "name": "Wrangler",
+        "price": 1599,
+        "img": "https://img01.ztat.net/article/spp-media-p1/ef8732d8c7ea4f29bfa4893af86e2029/590118e136134d45ad3b6472e517705f.jpg?imwidth=1800",
+        "description": "ANTIFIT SHERPA - Vinterjacka - leather brown​"
+    },
+    {
+        "id": "6",
+        "name": "Wrangler",
+        "price": 879,
+        "img": "https://img01.ztat.net/article/spp-media-p1/85e6901416ef4f588b2aa966277c6773/89b2ff1380094fd5bfe119466aef0bb7.jpg?imwidth=1800",
+        "description": "TEXAS STRETCH - Jeans straight leg - night break"
+    },
+    {
+        "id": "7",
+        "name": "Mango",
+        "price": 599,
+        "img": "https://img01.ztat.net/article/spp-media-p1/b87808a2985e42979324924d85d18d5d/57b6748c86904835a2a94b45f08c96c8.jpg?imwidth=1800",
+        "description": "NORDES - Jeans straight leg - blau"
+    },
+    {
+        "id": "8",
+        "name": "Wrangler",
+        "price": 999,
+        "img": "https://img01.ztat.net/article/spp-media-p1/200d5a4bdc9d4d32a5d0e82a7b64eda9/53dcc59d7f634a86bc8c91be4fc1cfd2.jpg?imwidth=1800",
+        "description": "FRONTIER - Jeans relaxed fit - full house"
+    },
+    {
+        "id": "9",
+        "name": "Calvin Klein Jeans",
+        "price": 1345,
+        "img": "https://img01.ztat.net/article/spp-media-p1/d4455b3782584f54a8dd3302857fc6ad/00fd2bdfadb54fe5b0a500b2095cff0d.jpg?imwidth=1800",
+        "description": "DAD - Jeans relaxed fit - denim dark"
+    },
+    {
+        "id": "10",
+        "name": "Levi's®",
+        "price": 969,
+        "img": "https://img01.ztat.net/article/spp-media-p1/90c0fadc4c6148648188a8040b741180/e1f031a21e314997a3278e77435a871f.jpg?imwidth=762",
+        "description": "55 RELAXED STRAIGHT - Jeans straight leg - wish you would"
+    },
+    {
+        "id": "11",
+        "name": "GANT",
+        "price": 359,
+        "img": "https://img01.ztat.net/article/spp-media-p1/d0439511c67842bdabb69a078961b4a7/2416d8596b89456dbe1aa387f6eaff13.jpg?imwidth=1800",
+        "description": "PRINTED ARCHIVE SHIELD - T-shirt - bas - black"
+    },
+    {
+        "id": "12",
+        "name": "Wrangler",
+        "price": 299,
+        "img": "https://img01.ztat.net/article/spp-media-p1/0862d4cd72da402a9f69d1d5c421109a/42017c03a8294bd8ae36c2fca35ff6bc.jpg?imwidth=1800",
+        "description": "BLOGO - T-shirt med print - navy"
+    },
+    {
+        "id": "13",
+        "name": "GAP",
+        "price": 167,
+        "img": "https://img01.ztat.net/article/spp-media-p1/1c295ce356e4490e98c03b501878a9f6/f4960c0bf85d468da9be4c61084b925b.jpg?imwidth=762",
+        "description": "EVERYDAY SOFT ORIGINAL ARCH - T-shirt med print - true black"
+    },
+    {
+        "id": "14",
+        "name": "Produkt 14",
+        "price": 105,
+        "img": "https://img01.ztat.net/outfit/c2e3694529954f7e92e81edb8bcee383/20b0a55a5ce747019157b34e409d2676.jpg?imwidth=1000",
+        "description": "Beskrivning av produkt 14."
+    },
+    {
+        "id": "15",
+        "name": "Produkt 15",
+        "price": 125,
+        "img": "https://img01.ztat.net/article/spp-media-p1/1f1989ca09bf4a45857aaaf8d5abd61c/ea45a895d25e414b8c8a3bc5ba43041e.jpg?imwidth=1800",
+        "description": "Beskrivning av produkt 15."
+    },
+    {
+        "id": "16",
+        "name": "Bershka",
+        "price": 229,
+        "img": "https://img01.ztat.net/article/spp-media-p1/8c8c0fd5af634a2f91bdf43566fac23d/380c1221e58d4197907aef557abcaaa9.jpg?imwidth=762",
+        "description": "TEXTURED STRIPED SHORT SLEEVE - T-shirt med print - camel"
+    },
+    {
+        "id": "17",
+        "name": "GAP",
+        "price": 1500,
+        "img": "https://img01.ztat.net/article/spp-media-p1/2b06a7a171a34330af6bad5da5a08775/609edddbbc484a23af0da5df9996b2d6.jpg?imwidth=1800",
+        "description": "TONAL ARCHIVE SHIELD ZIP HOODIE - Tröja med dragkedja - black"
+    },
+    {
+        "id": "18",
+        "name": "Wrangler",
+        "price": 349,
+        "img": "https://img01.ztat.net/article/spp-media-p1/8976fea75458443da89662b482c09676/e3e51f1aca944ac29182bb32dc98aafb.jpg?imwidth=1800",
+        "description": "LS SIGN OFF - Sweatshirt - worn white"
+    },
+    {
+        "id": "19",
+        "name": "Wrangler",
+        "price": 799,
+        "img": "https://img01.ztat.net/article/spp-media-p1/58b6cfd0febd49f79fbdee3aee330691/2533fdae503d4d55b9fb5923930f8f27.jpg?imwidth=1800",
+        "description": "CREWNECK - Sweatshirt - scarab"
+    },
+    {
+        "id": "20",
+        "name": "Levi's®",
+        "price": 416,
+        "img": "https://img01.ztat.net/article/spp-media-p1/8f8e70157fef446191a7fc32c5413ebb/87771c4c391649618e314f5bb665b26f.jpg?imwidth=1800",
+        "description": "RELAXED GRAPHIC CREW UNSIEX - Sweatshirt - blue"
+    }
+]

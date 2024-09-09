@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakta oss för mer information om Min Webshop.">
+    <title>Kontakta oss - Min Webshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
+            <span class="logo-text">Fashion Clothes</span>
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+                <li><a href="map.html">Karta</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon">
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <label for="menu-toggle" class="close">&times;</label> <!-- Rätt placerad stängningsikon -->
+    </header>
+
+    <main>
+        <section>
+            <h1>Kontakta oss</h1>
+            <p>Om du har några frågor, tveka inte att kontakta oss!</p>
+            <form action="mailto:info@minwebshop.se" method="post" enctype="text/plain">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Meddelande:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Skicka</button>
+            </form>
+        </section>
+    </main>
+
+    <div class="social-media">
+        <a href="https://www.facebook.com/yourpage" target="_blank">
+            <img src="img/facebook-icon.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank">
+            <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+
+    <footer>
+        <p>Kontakt: <a href="mailto:info@minwebshop.se">info@fashionclothes.se</a></p>
+        <p>&copy; 2024 Fashion Clothes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartCount = document.getElementById('cart-count');
+
+            // Hämta varukorgens data från localStorage
+            const storedCart = localStorage.getItem('cart');
+            if (storedCart) {
+                const cart = JSON.parse(storedCart);
+                const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.innerText = itemCount;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Din varukorg på Min Webshop.">
+    <title>Varukorg - Min Webshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
+            <span class="logo-text">Fashion Clothes</span>
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+                <li><a href="map.html">Karta</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <label for="menu-toggle" class="close">&times;</label>
+    </header>
+
+    <main>
+        <section>
+            <h1>Valda produkter</h1>
+            <div id="cart-items-container">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <p>Total produkter: <span id="total-items">0</span></p>
+            <p>Totalt pris: <span id="total-price">0 kr</span></p>
+            <a href="checkout.html" class="checkout">Gå till betalning</a>
+            <button class="close-cart">Stäng</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Kontakt: <a href="mailto:info@minwebshop.se">info@fashionclothes.se</a></p>
+        <p>&copy; 2024 Fashion Clothes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('products.json')
+                .then(response => response.json())
+                .then(products => {
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const cartItemsContainer = document.getElementById('cart-items-container');
+                    const totalItems = document.getElementById('total-items');
+                    const totalPrice = document.getElementById('total-price');
+
+                    let total = 0;
+                    let itemCount = 0;
+
+                    cartItemsContainer.innerHTML = '';
+
+                    cart.forEach(item => {
+                        const product = products.find(p => p.id === item.id);
+                        if (product) {
+                            const itemTotal = product.price * item.quantity;
+                            total += itemTotal;
+                            itemCount += item.quantity;
+
+                            cartItemsContainer.innerHTML += `
+                                <div class="cart-item">
+                                    <img src="${product.img}" alt="${product.name}" class="cart-item-image">
+                                    <div class="cart-item-info">
+                                        <strong>${product.name}</strong>
+                                        <p>${product.description}</p>
+                                        <p>${product.price} kr x ${item.quantity}</p>
+                                        <p><strong>${itemTotal} kr</strong></p>
+                                    </div>
+                                    <button class="remove-item" data-id="${item.id}">Ta bort</button>
+                                </div>
+                            `;
+                        }
+                    });
+
+                    totalItems.textContent = itemCount;
+                    totalPrice.textContent = `${total} kr`;
+
+                    document.querySelectorAll('.remove-item').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const id = this.getAttribute('data-id');
+                            const index = cart.findIndex(item => item.id === id);
+                            if (index > -1) {
+                                cart.splice(index, 1);
+                                localStorage.setItem('cart', JSON.stringify(cart));
+                                updateCart();
+                            }
+                        });
+                    });
+
+                    function updateCart() {
+                        fetch('products.json')
+                            .then(response => response.json())
+                            .then(products => {
+                                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                                const cartItemsContainer = document.getElementById('cart-items-container');
+                                const totalItems = document.getElementById('total-items');
+                                const totalPrice = document.getElementById('total-price');
+
+                                let total = 0;
+                                let itemCount = 0;
+
+                                cartItemsContainer.innerHTML = '';
+
+                                cart.forEach(item => {
+                                    const product = products.find(p => p.id === item.id);
+                                    if (product) {
+                                        const itemTotal = product.price * item.quantity;
+                                        total += itemTotal;
+                                        itemCount += item.quantity;
+
+                                        cartItemsContainer.innerHTML += `
+                                            <div class="cart-item">
+                                                <img src="${product.img}" alt="${product.name}" class="cart-item-image">
+                                                <div class="cart-item-info">
+                                                    <strong>${product.name}</strong>
+                                                    <p>${product.description}</p>
+                                                    <p>${product.price} kr x ${item.quantity}</p>
+                                                    <p><strong>${itemTotal} kr</strong></p>
+                                                </div>
+                                                <button class="remove-item" data-id="${item.id}">Ta bort</button>
+                                            </div>
+                                        `;
+                                    }
+                                });
+
+                                totalItems.textContent = itemCount;
+                                totalPrice.textContent = `${total} kr`;
+                            });
+                    }
+
+                    document.querySelector('.close-cart').addEventListener('click', function() {
+                        window.location.href = 'index.html'; // or another page
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

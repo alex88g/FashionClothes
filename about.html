@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lär känna oss på Min Webshop, din destination för högkvalitativa kläder.">
+    <title>Om oss - Min Webshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
+            <span class="logo-text">Fashion Clothes</span>
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+                <li><a href="map.html">Karta</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon">
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <label for="menu-toggle" class="close">&times;</label>
+    </header>
+
+    <main>
+        <section>
+            <h1>Om Oss</h1>
+            <h2>Vår Historia</h2>
+            <p>
+                Välkommen till <strong>Fashion Clothes</strong>, din destination för exklusiva och högkvalitativa modekläder. Vår webshop grundades år 2024 med en passion för att erbjuda det allra bästa inom mode och stil. Vi specialiserar oss på att tillhandahålla noggrant utvalda produkter som speglar vår engagemang för kvalitet och design.
+            </p>
+            <p>
+                På <strong>Fashion Clothes</strong> tror vi att mode är mer än bara kläder – det är ett sätt att uttrycka sig själv och känna sig fantastisk varje dag. Vi strävar efter att ge dig en shoppingupplevelse som kombinerar eleganta, trendiga plagg med tidlös stil. Varje produkt i vårt sortiment är vald med omsorg för att säkerställa att du får det allra bästa.
+            </p>
+            <p>
+                Tack för att du besöker oss och blir en del av vår modegemenskap. Vi ser fram emot att hjälpa dig att hitta de perfekta plaggen som kommer att förhöja din stil och självkänsla.
+            </p>
+            <p>
+                Vänligen,<br>
+                Team <strong>Fashion Clothes</strong>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Kontakt: <a href="mailto:info@minwebshop.se">info@minwebshop.se</a></p>
+        <p>&copy; 2024 Min Webshop. All Rights Reserved.</p>
+    </footer>
+    
+    
+    
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartCount = document.getElementById('cart-count');
+            const cartLink = document.querySelector('.cart-link');
+
+            // Hämta varukorgens data från localStorage
+            const storedCart = localStorage.getItem('cart');
+            if (storedCart) {
+                const cart = JSON.parse(storedCart);
+                const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.innerText = itemCount;
+            }
+
+            // Hantera stängning av menyn
+            const closeButton = document.querySelector('.close');
+            const menuToggle = document.getElementById('menu-toggle');
+
+            closeButton.addEventListener('click', () => {
+                menuToggle.checked = false; // Avmarkera checkboxen för att stänga menyn
+                // Navigera tillbaka till map.html
+                window.location.href = 'map.html';
+            });
+        });
+    </script>
+</body>
+</html>

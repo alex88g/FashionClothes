@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Se vårt sortiment av kläder och accessoarer.">
+    <title>Produkter - Min Webshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
+            <span class="logo-text">Fashion Clothes</span>
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+                <li><a href="map.html">Karta</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon">
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <label for="menu-toggle" class="close">&times;</label>
+    </header>
+
+    <main>
+        <section>
+            <h1>Våra Produkter</h1>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/03f0225c70694e3381ba3efeaf807f0b/76730c92b96545df97dd6707db8c9189.jpg?imwidth=1800" alt="Produkt 1">
+                    <h2>JDY</h2>
+                    <p>JDYNEWHAZEL SHINE - Tunn jacka - kalmata</p>
+                    <p>Pris: 518,00 kr</p>
+                    <button class="add-to-cart" data-product="1">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/ef0b468f15054d18827643ca9330a788/e5c3c4af70b640508179495ccd7a4416.jpg?imwidth=762" alt="Produkt 2">
+                    <h2>Levi's®</h2>
+                    <p>SHERPA - Jacka i konstläder - black</p>
+                    <p>Pris: 1.955,00 kr</p>
+                    <button class="add-to-cart" data-product="2">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/15f495479f8d4dc7b173e5eac3c20ec8/99f92463626a42b596190c159acff710.jpg?imwidth=762" alt="Produkt 3">
+                    <h2>Levi's®</h2>
+                    <p>HOODED TRUCKER - Jeansjacka - tiger's eye</p>
+                    <p>Pris: 791,00 kr</p>
+                    <button class="add-to-cart" data-product="3">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/5b393c547fcc3ea598f5deda7cba4d8a/da9c056ac3b64ac48ff84e9556a33221.jpg?imwidth=1800" alt="Produkt 4">
+                    <h2>Brandit</h2>
+                    <p>BRONX - Allvädersjacka - olive</p>
+                    <p>Pris: 1.245,00 kr</p>
+                    <button class="add-to-cart" data-product="4">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/ef8732d8c7ea4f29bfa4893af86e2029/590118e136134d45ad3b6472e517705f.jpg?imwidth=1800" alt="Produkt 5">
+                    <h2>Wrangler</h2>
+                    <p>ANTIFIT SHERPA - Vinterjacka - leather brown​</p>
+                    <p>Pris: 1.599,00 kr</p>
+                    <button class="add-to-cart" data-product="5">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/85e6901416ef4f588b2aa966277c6773/89b2ff1380094fd5bfe119466aef0bb7.jpg?imwidth=1800" alt="Produkt 6">
+                    <h2>Wrangler</h2>
+                    <p>TEXAS STRETCH - Jeans straight leg - night break</p>
+                    <p>Pris: 879,00 kr</p>
+                    <button class="add-to-cart" data-product="6">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/b87808a2985e42979324924d85d18d5d/57b6748c86904835a2a94b45f08c96c8.jpg?imwidth=1800" alt="Produkt 7">
+                    <h2>Mango</h2>
+                    <p>NORDES - Jeans straight leg - blau</p>
+                    <p>Pris: 599,00 kr</p>
+                    <button class="add-to-cart" data-product="7">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/200d5a4bdc9d4d32a5d0e82a7b64eda9/53dcc59d7f634a86bc8c91be4fc1cfd2.jpg?imwidth=1800" alt="Produkt 8">
+                    <h2>Wrangler</h2>
+                    <p>FRONTIER - Jeans relaxed fit - full house</p>
+                    <p>Pris: 999,00 kr</p>
+                    <button class="add-to-cart" data-product="8">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/d4455b3782584f54a8dd3302857fc6ad/00fd2bdfadb54fe5b0a500b2095cff0d.jpg?imwidth=1800" alt="Produkt 9">
+                    <h2>Calvin Klein Jeans</h2>
+                    <p>DAD - Jeans relaxed fit - denim dark</p>
+                    <p>Pris: 1.345,00 kr</p>
+                    <button class="add-to-cart" data-product="9">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/90c0fadc4c6148648188a8040b741180/e1f031a21e314997a3278e77435a871f.jpg?imwidth=762" alt="Produkt 10">
+                    <h2>Levi's®</h2>
+                    <p>555 RELAXED STRAIGHT - Jeans straight leg - wish you would</p>
+                    <p>Pris: 969,00 kr</p>
+                    <button class="add-to-cart" data-product="10">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/d0439511c67842bdabb69a078961b4a7/2416d8596b89456dbe1aa387f6eaff13.jpg?imwidth=1800" alt="Produkt 11">
+                    <h2>GANT</h2>
+                    <p>PRINTED ARCHIVE SHIELD - T-shirt - bas - black</p>
+                    <p>Pris: 359,00 kr</p>
+                    <button class="add-to-cart" data-product="11">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/0862d4cd72da402a9f69d1d5c421109a/42017c03a8294bd8ae36c2fca35ff6bc.jpg?imwidth=1800" alt="Produkt 12">
+                    <h2>Wrangler</h2>
+                    <p>BLOGO - T-shirt med print - navy</p>
+                    <p>Pris: 299,00 kr</p>
+                    <button class="add-to-cart" data-product="12">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/1c295ce356e4490e98c03b501878a9f6/f4960c0bf85d468da9be4c61084b925b.jpg?imwidth=762" alt="Produkt 13">
+                    <h2>GAP</h2>
+                    <p>EVERYDAY SOFT ORIGINAL ARCH - T-shirt med print - true black</p>
+                    <p>Pris: 167,00 kr</p>
+                    <button class="add-to-cart" data-product="13">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/outfit/c2e3694529954f7e92e81edb8bcee383/20b0a55a5ce747019157b34e409d2676.jpg?imwidth=1000" alt="Produkt 14">
+                    <h2>Produkt 14</h2>
+                    <p>Beskrivning av produkt 14.</p>
+                    <p>Pris: 105 kr</p>
+                    <button class="add-to-cart" data-product="14">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/1f1989ca09bf4a45857aaaf8d5abd61c/ea45a895d25e414b8c8a3bc5ba43041e.jpg?imwidth=1800" alt="Produkt 15">
+                    <h2>Produkt 15</h2>
+                    <p>Beskrivning av produkt 15.</p>
+                    <p>Pris: 125 kr</p>
+                    <button class="add-to-cart" data-product="15">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/8c8c0fd5af634a2f91bdf43566fac23d/380c1221e58d4197907aef557abcaaa9.jpg?imwidth=762" alt="Produkt 16">
+                    <h2>Bershka</h2>
+                    <p>TEXTURED STRIPED SHORT SLEEVE - T-shirt med print - camel</p>
+                    <p>Pris: 229,00 kr</p>
+                    <button class="add-to-cart" data-product="16">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/2b06a7a171a34330af6bad5da5a08775/609edddbbc484a23af0da5df9996b2d6.jpg?imwidth=1800" alt="Produkt 17">
+                    <h2>GAP</h2>
+                    <p>TONAL ARCHIVE SHIELD ZIP HOODIE - Tröja med dragkedja - black</p>
+                    <p>Pris: 1.500,00 kr</p>
+                    <button class="add-to-cart" data-product="17">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/8976fea75458443da89662b482c09676/e3e51f1aca944ac29182bb32dc98aafb.jpg?imwidth=1800" alt="Produkt 18">
+                    <h2>Wrangler</h2>
+                    <p>LS SIGN OFF - Sweatshirt - worn white</p>
+                    <p>Pris: 349,00 kr</p>
+                    <button class="add-to-cart" data-product="18">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/58b6cfd0febd49f79fbdee3aee330691/2533fdae503d4d55b9fb5923930f8f27.jpg?imwidth=1800" alt="Produkt 19">
+                    <h2>Wrangler</h2>
+                    <p>CREWNECK - Sweatshirt - scarab</p>
+                    <p>Pris: 799,00 kr</p>
+                    <button class="add-to-cart" data-product="19">Lägg i varukorg</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://img01.ztat.net/article/spp-media-p1/8f8e70157fef446191a7fc32c5413ebb/87771c4c391649618e314f5bb665b26f.jpg?imwidth=1800" alt="Produkt 20">
+                    <h2>Levi's®</h2>
+                    <p>RELAXED GRAPHIC CREW UNSIEX - Sweatshirt - blue</p>
+                    <p>Pris: 416,00 kr</p>
+                    <button class="add-to-cart" data-product="20">Lägg i varukorg</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shopping-cart-container" class="shopping-cart">
+        <h2>Din Varukorg</h2>
+        <div class="shopping-cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <p>Total produkter: <span id="shopping-cart-total-items">0</span></p>
+        <p>Totalt pris: <span id="shopping-cart-total-price">0 kr</span></p>
+        <a href="checkout.html" class="shopping-cart-checkout">Gå till betalning</a>
+        <button class="shopping-cart-close">Stäng</button>
+    </div>
+    
+    <div id="shopping-cart-toast" class="toast">Produkten har lagts till i varukorg</div>
+    
+
+    <footer>
+        <p>Kontakt: <a href="mailto:info@minwebshop.se">info@fashionclothes.se</a></p>
+        <p>&copy; 2024 Fashion Clothes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedCart = localStorage.getItem('cart');
+            if (storedCart) {
+                cart = JSON.parse(storedCart);
+                updateCart();  // Uppdatera varukorgen direkt vid sidladdning
+            }
+        });
+    
+        const cartItems = document.querySelector('.shopping-cart-items');
+const totalItems = document.getElementById('shopping-cart-total-items');
+const totalPrice = document.getElementById('shopping-cart-total-price');
+       
+const toast = document.getElementById('shopping-cart-toast');
+
+        const cartCount = document.getElementById('cart-count');
+        let cart = [];
+    
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+        const productId = this.getAttribute('data-product');
+        const productElement = this.parentElement;
+        const productName = productElement.querySelector('h2').innerText;
+        const productPriceText = productElement.querySelector('p:last-of-type').innerText;
+        const productPrice = parsePrice(productPriceText);
+
+        if (isNaN(productPrice)) {
+            console.error('Failed to parse product price.');
+            return;
+        }
+
+        // Add product to cart
+        const productIndex = cart.findIndex(item => item.id === productId);
+        if (productIndex > -1) {
+            cart[productIndex].quantity += 1;
+        } else {
+            cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+        }
+
+        updateCart();
+        showToast('Produkten har lagts till i varukorg');
+        
+        // Visa varukorgen
+        document.getElementById('shopping-cart-container').style.display = 'block';
+    });
+});
+
+    
+        function updateCart() {
+            cartItems.innerHTML = '';
+            let totalAmount = 0;
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'shopping-cart-items';
+                itemElement.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>Pris: ${item.price.toFixed(2)} kr</p>
+                    <label for="quantity${item.id}">Antal:</label>
+                    <input type="number" id="quantity${item.id}" name="quantity" min="1" value="${item.quantity}" data-product="${item.id}">
+                    <button class="remove-item" data-product="${item.id}">Ta bort</button>
+                `;
+                cartItems.appendChild(itemElement);
+                totalAmount += item.price * item.quantity;
+            });
+            totalItems.innerText = cart.length;
+            totalPrice.innerText = `${totalAmount.toFixed(2)} kr`;
+            cartCount.innerText = cart.length;
+    
+            // Spara cart till localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            // Rensa localStorage om varukorg är tom
+            if (cart.length === 0) {
+                localStorage.removeItem('cart');
+            }
+        }
+    
+        function showToast(message) {
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    
+        document.querySelector('.shopping-cart-close').addEventListener('click', () => {
+    document.getElementById('shopping-cart-container').style.display = 'none';
+});
+
+        document.querySelector('.cart-link').addEventListener('click', () => {
+            document.getElementById('cart').style.display = 'block';
+        });
+    
+        cartItems.addEventListener('click', function(event) {
+            if (event.target.classList.contains('remove-item')) {
+                const productId = event.target.getAttribute('data-product');
+                cart = cart.filter(item => item.id !== productId);
+                updateCart();
+            }
+        });
+    
+        cartItems.addEventListener('input', function(event) {
+            if (event.target.type === 'number') {
+                const productId = event.target.getAttribute('data-product');
+                const newQuantity = parseInt(event.target.value);
+                const product = cart.find(item => item.id === productId);
+                if (product) {
+                    product.quantity = newQuantity;
+                    updateCart();
+                }
+            }
+        });
+        
+    
+        function parsePrice(priceText) {
+            // Ta bort "Pris: " och " kr", ersätt punkt med komma och hantera tusentalsavgränsare
+            return parseFloat(priceText
+                .replace('Pris: ', '')
+                .replace(' kr', '')
+                .replace(/\./g, '') // Ta bort tusentalsavgränsare
+                .replace(',', '.')); // Ersätt kommatecken med punkt för decimaler
+        }
+
+        
+    </script>
+    
+    
+    
+
+</body>
+</html>

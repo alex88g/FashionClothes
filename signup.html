@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registrera ett konto på Min Webshop">
+    <title>Registrera - Min Webshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
+            <span class="logo-text">Fashion Clothes</span>
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+                <li><a href="map.html">Karta</a></li>
+                <li><a href="about.html">Om oss</a></li>
+        </nav>
+        <label for="menu-toggle" class="close">&times;</label>
+    </header>
+
+    <main>
+        <section id="signup">
+            <h2>Registrera ett konto</h2>
+            <form action="submit_signup.php" method="POST">
+                <label for="username">Användarnamn:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Registrera</button>
+                <p>Redan medlem? <a href="login.html">Logga in här</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Kontakt: <a href="mailto:info@minwebshop.se">info@fashionclothes.se</a></p>
+        <p>&copy; 2024 Fashion Clothes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
