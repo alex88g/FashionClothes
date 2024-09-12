@@ -9,34 +9,34 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="Gå till startsidan">
             <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
             <span class="logo-text">Fashion Clothes</span>
         </a>
         
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="hamburger" aria-label="Meny">&#9776;</label>
         <nav>
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="products.html">Produkter</a></li>
-                <li><a href="contact.html">Kontakta oss</a></li>
-                <li><a href="map.html">Karta</a></li>
-                <li><a href="about.html">Om oss</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html" accesskey="h" aria-label="Hem">Hem</a></li>
+                <li><a href="products.html" accesskey="p" aria-label="Produkter">Produkter</a></li>
+                <li><a href="contact.html" accesskey="k" aria-label="Kontakta oss">Kontakta oss</a></li>
+                <li><a href="map.html" accesskey="m" aria-label="Karta">Karta</a></li>
+                <li><a href="about.html" accesskey="o" aria-label="Om oss">Om oss</a></li>
+                <li><a href="login.html" accesskey="l" aria-label="Login">Login</a></li>
                 <li>
-                    <a href="cart.html" class="cart-link">
-                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon">
+                    <a href="cart.html" class="cart-link" aria-label="Varukorg">
+                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon" aria-labelledby="cart-count">
                         <span id="cart-count">0</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <label for="menu-toggle" class="close">&times;</label>
+        <label for="menu-toggle" class="close" aria-label="Stäng meny">&times;</label>
     </header>
 
     <main>
-        <section>
+        <section id="about">
             <h1>Om Oss</h1>
             <h2>Vår Historia</h2>
             <p>
@@ -68,8 +68,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             const cartCount = document.getElementById('cart-count');
             const cartLink = document.querySelector('.cart-link');
-
-            // Hämta varukorgens data från localStorage
             const storedCart = localStorage.getItem('cart');
             if (storedCart) {
                 const cart = JSON.parse(storedCart);
@@ -77,13 +75,11 @@
                 cartCount.innerText = itemCount;
             }
 
-            // Hantera stängning av menyn
             const closeButton = document.querySelector('.close');
             const menuToggle = document.getElementById('menu-toggle');
 
             closeButton.addEventListener('click', () => {
-                menuToggle.checked = false; // Avmarkera checkboxen för att stänga menyn
-                // Navigera tillbaka till map.html
+                menuToggle.checked = false;
                 window.location.href = 'map.html';
             });
         });

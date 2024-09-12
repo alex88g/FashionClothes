@@ -6,7 +6,6 @@
     <meta name="description" content="Genomför din betalning för din beställning.">
     <title>Betalning - Min Webshop</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome Library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -17,45 +16,51 @@
         </a>
         
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="hamburger" aria-label="Meny">&#9776;</label>
         <nav>
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="products.html">Produkter</a></li>
-                <li><a href="contact.html">Kontakta oss</a></li>
-                <li><a href="map.html">Karta</a></li>
-                <li><a href="about.html">Om oss</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html" accesskey="h">Hem</a></li>
+                <li><a href="products.html" accesskey="p">Produkter</a></li>
+                <li><a href="contact.html" accesskey="k">Kontakta oss</a></li>
+                <li><a href="map.html" accesskey="m">Karta</a></li>
+                <li><a href="about.html" accesskey="o">Om oss</a></li>
+                <li><a href="login.html" accesskey="l">Login</a></li>
                 <li>
-                    <a href="cart.html" class="cart-link">
+                    <a href="cart.html" class="cart-link" aria-label="Varukorg">
                         <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon">
                         <span id="cart-count">0</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <label for="menu-toggle" class="close">&times;</label>
+        <label for="menu-toggle" class="close" aria-label="Stäng meny">&times;</label>
     </header>
 
     <main>
-        <section>
+        <section id="checkout">
             <h1>Betalning</h1>
-            <form id="payment-form">
+
+          
+            <div id="error-message" aria-live="assertive" role="alert" style="display: none; color: red;">
+                Vänligen fyll i alla obligatoriska fält.
+            </div>
+
+            <form id="payment-form" aria-labelledby="checkout">
                 <div class="form-group">
                     <label for="name">Namn:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required aria-required="true" placeholder="Skriv ditt namn">
                 </div>
                 <div class="form-group">
                     <label for="email">E-post:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required aria-required="true" placeholder="Skriv din e-post">
                 </div>
                 <div class="form-group">
                     <label for="address">Adress:</label>
-                    <input type="text" id="address" name="address" required>
+                    <input type="text" id="address" name="address" required aria-required="true" placeholder="Skriv din adress">
                 </div>
                 <div class="form-group">
                     <label for="payment">Betalningsmetod:</label>
-                    <select id="payment" name="payment" required>
+                    <select id="payment" name="payment" required aria-required="true">
                         <option value="">Välj betalningsmetod</option>
                         <option value="credit">Kreditkort <i class="fas fa-credit-card"></i></option>
                         <option value="paypal">PayPal <i class="fab fa-paypal"></i></option>
@@ -67,11 +72,11 @@
                         <i class="fas fa-credit-card"></i>
                     </div>
                     <label for="card-number">Kortnummer:</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required aria-required="true">
                     <label for="expiry-date">Utgångsdatum:</label>
-                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/ÅÅ" required>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/ÅÅ" required aria-required="true">
                     <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" required aria-required="true">
                 </div>
 
                 <div id="paypal-info" class="form-group payment-method" style="display: none;">
@@ -79,13 +84,17 @@
                         <i class="fab fa-paypal"></i>
                     </div>
                     <label for="paypal-email">PayPal-e-post:</label>
-                    <input type="email" id="paypal-email" name="paypal-email" placeholder="din.email@exempel.com" required>
+                    <input type="email" id="paypal-email" name="paypal-email" placeholder="din.email@exempel.com" required aria-required="true">
                 </div>
 
-                <button type="button" id="submit-button" class="btn">Betala</button>
+                <button type="button" id="submit-button" class="btn" aria-label="Skicka betalning">Betala</button>
             </form>
             <div id="thank-you-container" style="display: none;">
-                <!-- Innehåll från thank-you.html kommer att laddas här -->
+                <h2>Tack för din beställning!</h2>
+                <p>Vi har mottagit din betalning och kommer att bearbeta din beställning så snart som möjligt.</p>
+                <br>
+                <br>
+                <a href="index.html" class="btn">Tillbaka till Hem</a>
             </div>
         </section>
     </main>
@@ -96,27 +105,19 @@
     </footer>
 
     <script>
-        // Hanterar visning av betalningsmetodens formulärfält
         document.getElementById('payment').addEventListener('change', function() {
             var method = this.value;
             var creditCardInfo = document.getElementById('credit-card-info');
             var paypalInfo = document.getElementById('paypal-info');
-
-            // Döljer båda betalningsmetoderna
             creditCardInfo.style.display = 'none';
             paypalInfo.style.display = 'none';
-
-            // Visar den valda betalningsmetoden
             if (method === 'credit') {
                 creditCardInfo.style.display = 'block';
             } else if (method === 'paypal') {
                 paypalInfo.style.display = 'block';
             }
         });
-
-        // Hanterar formulärets inlämning
         document.getElementById('submit-button').addEventListener('click', function() {
-            // Kontrollera att en betalningsmetod har valts och att alla nödvändiga fält är ifyllda
             var paymentMethod = document.getElementById('payment').value;
             var valid = true;
 
@@ -137,26 +138,19 @@
             }
 
             if (valid) {
-                // Visa betalningsbekräftelse
-                document.getElementById('payment-form').style.display = 'none'; // Döljer betalningsformuläret
-                document.getElementById('thank-you-container').style.display = 'block'; // Visar thank-you.html innehåll
-
-                // Ladda thank-you.html via AJAX
-                fetch('thank-you.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('thank-you-container').innerHTML = data;
-                    })
-                    .catch(error => console.error('Error loading thank-you.html:', error));
+            
+                document.getElementById('payment-form').style.display = 'none'; 
+                document.getElementById('thank-you-container').style.display = 'block';
             } else {
-                alert('Vänligen fyll i alla obligatoriska fält.');
+             
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.style.display = 'block';
             }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
             const cartCount = document.getElementById('cart-count');
 
-            // Hämta varukorgens data från localStorage
             const storedCart = localStorage.getItem('cart');
             if (storedCart) {
                 const cart = JSON.parse(storedCart);

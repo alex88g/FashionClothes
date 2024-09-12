@@ -1,27 +1,32 @@
-/* Reset och allmänna stilar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header */
+
 header {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+ 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 1000; /* För att ligga ovanpå andra element */
+    position: relative;   
+    z-index: 1000; 
+
 }
 
 header .logo {
@@ -78,13 +83,191 @@ nav a {
     vertical-align: middle;
 }
 
-/* Responsiv meny */
+
 .menu-toggle {
     display: none;
 }
 
 .hamburger, .close {
     display: none;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #f7f7f7;
+}
+
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-top: 3px solid #4CAF50;
+    padding: 10px 0;
+}
+
+footer p {
+    margin-top: 5px;
+    height: 15px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: #a8d5ba;
+}
+
+
+       section#checkout {
+        margin-top: 0;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    section#checkout h1 {
+        margin-bottom: 20px;
+        font-size: 2.5em;
+        color: #333;
+    }
+
+    section#checkout form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 500px;
+        text-align: left;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+
+    .form-group input::placeholder {
+        color: #888;
+    }
+
+    .btn {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1.2em;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+    }
+
+    .icon-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .icon-wrapper i {
+        font-size: 2em;
+        color: #000000;
+    }
+
+    .toast {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+        white-space: nowrap;
+        padding: 16px;
+        box-shadow: 0px 0px 10px 0px #000000;
+    }
+    
+    .toast.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    
+
+    @media (max-width: 600px) {
+        section#checkout {
+            padding: 20px;
+        }
+
+        .btn {
+            font-size: 1em;
+            padding: 10px 20px;
+        }
+    }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.product-item:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+}
+
+.product-item img:hover {
+    transform: scale(1.1); 
 }
 
 @media (max-width: 768px) {
@@ -146,230 +329,374 @@ nav a {
     }
 }
 
-/* Bildsektion */
+section#home {
+    margin-top: 0;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+section#home h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+section#home p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
 .image-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 60px); /* Justera höjden beroende på headern och footer */
-    overflow: hidden;
+    max-width: 1000px;
+    margin-top: 20px;
 }
 
-.outlet-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+.image-container img.outlet-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Huvudsektion */
-main {
-    background-color: #f5f5f5;
-    padding: 20px;
-}
-
-.main-section {
-    margin: 5px;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    border-top: 3px solid #4CAF50;
-}
-
-footer p {
-    margin-top: 5px;
-    height: 30px;
-    font-size: 14px;
-}
-
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer a:visited {
-    color: #a8d5ba;
-}
-
-/* Produkter grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.product-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px; /* Rundade hörn */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition för hover */
-}
-
-.product-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Ser till att bilden följer de rundade hörnen */
-    transition: transform 0.3s ease-in-out; /* Smooth transition för zoom-effekten */
-}
-
-.product-item:hover {
-    transform: scale(1.03); /* Zoomar in produktkortet lite vid hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lägger till en skugga vid hover */
-}
-
-.product-item img:hover {
-    transform: scale(1.1); /* Zoomar in bilden lite mer vid hover */
-}
-
-.add-to-cart, .remove-item, #checkout {
+.image-container a.btn-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
     background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.add-to-cart:hover, .remove-item:hover, #checkout:hover {
+.image-container a.btn-overlay:hover {
     background-color: #45a049;
-    
 }
 
-/* Varukorg */
-.cart {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    background-color: #f8f8f8;
-    border-left: 1px solid #ddd;
-    padding: 20px;
+@media (max-width: 600px) {
+    section#home {
+        padding: 20px;
+    }
+
+    .image-container a.btn-overlay {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+section#contact {
+    margin-top: 0;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+section#contact h1 {
+    margin-bottom: 20px;
+}
+
+section#contact form {
     display: flex;
     flex-direction: column;
-    z-index: 1000; /* To ensure it stays above other content */
+    gap: 15px;
+    width: 100%;
 }
 
-.cart h2 {
-    margin-top: 0;
+section#contact form label {
+    text-align: left;
 }
 
-#cart-items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1;
-    overflow-y: auto;
+section#contact form input,
+section#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
-#cart-items li {
-    margin-bottom: 10px;
-}
-
-.remove-item {
-    background-color: #f44336;
-    color: white;
+section#contact form button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
-    padding: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-/* Checkout */
+section#contact form button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    section#contact {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+section#map {
+    margin-top: 0;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+section#map iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    section#map {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    section#map iframe {
+        height: 300px;
+    }
+}
+
+section#about {
+    margin-top: 0;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+section#about h1,
+section#about h2 {
+    margin-bottom: 20px;
+}
+
+section#about p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    section#about {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    section#about p {
+        font-size: 16px;
+    }
+}
+
+section#signup {
+    margin-top: 0;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+section#signup h2 {
+    text-align: center;
+}
+
+section#signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+section#signup label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section#signup input[type="text"],
+section#signup input[type="password"],
+section#signup input[type="email"] {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    section#signup {
+        margin-top: 20%;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 360px) {
+    section {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        flex: auto;
+        padding: 15px;
+        min-height: auto; 
+    }
+}
+
+@media (min-width: 980px) {
+    section {
+        padding: 20px;
+        height: auto; 
+        flex: auto;
+    }
+}
+
+section#login {
+    margin-top: 0;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px; 
+    text-align: center;
+}
+
+/* Stil för formuläret */
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
-form label {
+/* Inputfält */
+input[type="text"], input[type="password"] {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px; 
+    width: 100%;
+}
+
+/* Submit-knapp */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px; 
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+p {
     margin-top: 10px;
 }
 
-form input, form select {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+p a {
+    color: #4CAF50; 
+    text-decoration: none;
 }
 
-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+p a:hover {
+    text-decoration: underline;
 }
 
-/* Toast */
-.toast {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
+
+footer {
     text-align: center;
-    border-radius: 2px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-    white-space: nowrap;
-    padding: 16px;
-    box-shadow: 0px 0px 10px 0px #000000;
+    margin-top: 20px;
 }
 
-.toast.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+@media (max-width: 600px) {
+    section#login {
+        margin-top: 20%;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+    }
 }
 
-/* CSS för Om oss-sektionen */
-section {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@media (max-width: 360px) {
+    section {
+        padding: 10px;
+    }
 }
 
-section h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+    section {
+        flex: auto;
+        padding: 15px;
+        min-height: auto; 
+    }
 }
 
-section h2 {
-    font-size: 1.8em;
-    color: #555;
-    margin-bottom: 15px;
+@media (min-width: 980px) {
+    section {
+        padding: 20px;
+        height: auto; 
+        flex: auto;
+    }
 }
 
-section p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 20px;
-}
 
-section strong {
-    color: #333;
-}
-
-section p:last-of-type {
-    margin-bottom: 0;
-}
-
-/* Sociala medier - Facebook och Instagram ikoner */
 .social-media {
     display: flex;
     justify-content: center;
@@ -389,17 +716,96 @@ section p:last-of-type {
     filter: brightness(0.8);
 }
 
-/* Valda produkter */
-#valda-produkter {
-    padding: 20px;
-    background-color: #f9f9f9;
+
+ section#cart {
+    margin-top: 0;
+    padding: 40px;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
 }
 
-#valda-produkter h1 {
-    font-size: 24px;
+section#cart h1 {
     margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+#cart-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width:1600px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.cart-item-image {
+    margin-left: 10px;
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    flex: 1;
+    text-align: left;
+}
+
+.cart-item-info p {
+    margin: 5px 0;
+}
+
+
+
+.remove-item:hover {
+    background-color: #4CAF50;
+}
+
+
+
+
+
+
+/* Anpassning för mindre skärmar */
+@media (max-width: 600px) {
+    section#cart {
+        padding: 20px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cart-item-image {
+        width: 100%;
+        max-width: 150px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .remove-item,
+    .checkout,
+    .close-cart {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
 }
 
 .cart-item {
@@ -435,18 +841,18 @@ section p:last-of-type {
     color: #fff;
     border: none;
     padding: 5px 10px;
-    margin-right: 100px;
+    margin-right: 20px;
     cursor: pointer;
     border-radius: 4px;
     font-size: 18px;
 }
 
-/* Checkout Section */
+
 .checkout {
     display: inline-block;
     background-color: #4CAF50;
     color: white;
-    padding: 6.5px 15px;
+    padding:10px 15px;
     margin: 10px;
     text-decoration: none;
     border-radius: 5px;
@@ -474,7 +880,7 @@ section p:last-of-type {
     background: #e53935;
 }
 
-/* Responsive Styles for Cart and Products */
+
 @media (max-width: 768px) {
     .cart {
         width: 100%;
@@ -503,13 +909,13 @@ section p:last-of-type {
         font-size: 20px;
     }
 
-    /* Stil för knappen på bildens överlagring */
+  
 .btn-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(76, 175, 80, 0.8); /* En halvtransparent grön färg */
+    background-color: rgba(76, 175, 80, 0.8); 
     color: white;
     padding: 15px 25px;
     text-align: center;
@@ -521,10 +927,22 @@ section p:last-of-type {
 }
 
 .btn-overlay:hover {
-    background-color: rgba(76, 175, 80, 1); /* Heltäckande grön färg vid hover */
+    background-color: rgba(76, 175, 80, 1); 
 }
 
+.product-item button {
+    background-color: rgba(76, 175, 80, 0.8); 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
+.product-item button:hover {
+    background-color: rgba(76, 175, 80, 1); 
+}
 
 }
 
@@ -538,13 +956,15 @@ section p:last-of-type {
         border-left: 1px solid #ddd;
         padding: 20px;
     }
-    /* Stil för knappen på bildens överlagring */
+
+    
+ 
 .btn-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(76, 175, 80, 0.8); /* En halvtransparent grön färg */
+    background-color: rgba(76, 175, 80, 0.8); 
     color: white;
     padding: 15px 25px;
     text-align: center;
@@ -556,128 +976,144 @@ section p:last-of-type {
 }
 
 .btn-overlay:hover {
-    background-color: rgba(76, 175, 80, 1); /* Heltäckande grön färg vid hover */
+    background-color: rgba(76, 175, 80, 1); 
 }
 
-/* Gör kartan responsiv */
-iframe {
-    width: 100%;
-    height: 70vh; /* 60% av skärmens höjd */
-    border: none;
+
+
+#products {
+    padding: 2rem;
 }
 
-/* Anpassa layouten för mobila enheter */
-@media screen and (max-width: 768px) {
-    iframe {
-        height: 50vh; /* Justera höjden för mindre skärmar */
-    }
+#products h1 {
+    font-size: 2rem; 
+    margin-bottom: 1rem;
 }
 
-/* Ytterligare layoutjusteringar för små mobiler */
-@media screen and (max-width: 480px) {
-    iframe {
-        height: 40vh; /* Ännu mindre höjd på små skärmar */
-    }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
 }
 
-/* Styling för varukorgen */
-#shopping-cart-container {
-    background-color: #f9f9f9;
-    padding: 20px;
+.product-item {
     border: 1px solid #ddd;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: 20px auto;
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#shopping-cart-container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.product-item img {
+    width: 50%;
+    height: auto;
+    max-height: 180px; 
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-item h2 {
+    font-size: 1.2rem; 
+    margin: 0.5rem 0;
+}
+
+.product-item p {
+    font-size: 1rem; 
+    color: #666;
+}
+
+.product-item button {
+    background-color: rgba(76, 175, 80, 0.8); 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background-color: rgba(76, 175, 80, 1); 
+}
+
+
+.shopping-cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: none;
+    padding-bottom: 150px;
 }
 
 .shopping-cart-items {
-    max-height: 300px;
+    margin-top: 5%;
+    max-height: calc(100% - 140px);
     overflow-y: auto;
-    margin-bottom: 20px;
 }
 
-.shopping-cart-item {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+.shopping-cart-close {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
-.shopping-cart-item:last-child {
-    border-bottom: none;
-}
-
-#shopping-cart-container p {
-    font-size: 18px;
-    margin-bottom: 10px;
+.shopping-cart-close:hover {
+    background: #e53935;
 }
 
 .shopping-cart-checkout {
     display: inline-block;
     background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px; /* Justera padding för att passa den större textstorleken */
-    margin: 10px;
-    font-size: 12px; /* Justera textstorlek för att göra texten större */
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
     transition: background-color 0.3s ease;
-    text-align: center; /* För att centrera texten om det behövs */
-    line-height: 1.5; /* Justera linjehöjden för att ge texten mer vertikalt utrymme */
 }
 
 .shopping-cart-checkout:hover {
-    background-color: #45a049;
+    background: #45a049;
 }
 
-.shopping-cart-close {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center; /* För att centrera texten om det behövs */
-    line-height: 1.5;
-    font-size: 12px; /* Justera textstorlek för att göra texten större */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.shopping-cart-close:hover {
-    background-color: #e53935;
-}
-
-/* Toast-meddelande */
-#shopping-cart-toast {
-    visibility: hidden;
-    min-width: 250px;
-    background-color: #333;
-    color: white;
+#thankyou {
     text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
-    transition: visibility 0s, opacity 0.5s linear;
-    opacity: 0;
 }
 
-#shopping-cart-toast.show {
-    visibility: visible;
-    opacity: 1;
+#thankyou p {
+    margin: 0 0 20px 0;
 }
 
 
+@media screen and (min-width: 360px) and (max-width: 980px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 5px;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
 }

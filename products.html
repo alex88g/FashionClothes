@@ -9,34 +9,34 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="Gå till startsidan">
             <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
             <span class="logo-text">Fashion Clothes</span>
         </a>
         
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="hamburger" aria-label="Meny">&#9776;</label>
         <nav>
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="products.html">Produkter</a></li>
-                <li><a href="contact.html">Kontakta oss</a></li>
-                <li><a href="map.html">Karta</a></li>
-                <li><a href="about.html">Om oss</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html" accesskey="h" aria-label="Hem">Hem</a></li>
+                <li><a href="products.html" accesskey="p" aria-label="Produkter">Produkter</a></li>
+                <li><a href="contact.html" accesskey="k" aria-label="Kontakta oss">Kontakta oss</a></li>
+                <li><a href="map.html" accesskey="m" aria-label="Karta">Karta</a></li>
+                <li><a href="about.html" accesskey="o" aria-label="Om oss">Om oss</a></li>
+                <li><a href="login.html" accesskey="l" aria-label="Login">Login</a></li>
                 <li>
-                    <a href="cart.html" class="cart-link">
-                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon">
+                    <a href="cart.html" class="cart-link" aria-label="Varukorg">
+                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon" aria-labelledby="cart-count">
                         <span id="cart-count">0</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <label for="menu-toggle" class="close">&times;</label>
+        <label for="menu-toggle" class="close" aria-label="Stäng meny">&times;</label>
     </header>
 
     <main>
-        <section>
+        <section id="products">
             <h1>Våra Produkter</h1>
             <div class="product-grid">
                 <div class="product-item">
@@ -44,6 +44,7 @@
                     <h2>JDY</h2>
                     <p>JDYNEWHAZEL SHINE - Tunn jacka - kalmata</p>
                     <p>Pris: 518,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="1">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -51,6 +52,7 @@
                     <h2>Levi's®</h2>
                     <p>SHERPA - Jacka i konstläder - black</p>
                     <p>Pris: 1.955,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="2">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -58,6 +60,7 @@
                     <h2>Levi's®</h2>
                     <p>HOODED TRUCKER - Jeansjacka - tiger's eye</p>
                     <p>Pris: 791,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="3">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -65,6 +68,7 @@
                     <h2>Brandit</h2>
                     <p>BRONX - Allvädersjacka - olive</p>
                     <p>Pris: 1.245,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="4">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -72,6 +76,7 @@
                     <h2>Wrangler</h2>
                     <p>ANTIFIT SHERPA - Vinterjacka - leather brown​</p>
                     <p>Pris: 1.599,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="5">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -79,6 +84,7 @@
                     <h2>Wrangler</h2>
                     <p>TEXAS STRETCH - Jeans straight leg - night break</p>
                     <p>Pris: 879,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="6">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -86,6 +92,7 @@
                     <h2>Mango</h2>
                     <p>NORDES - Jeans straight leg - blau</p>
                     <p>Pris: 599,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="7">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -93,6 +100,7 @@
                     <h2>Wrangler</h2>
                     <p>FRONTIER - Jeans relaxed fit - full house</p>
                     <p>Pris: 999,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="8">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -100,6 +108,7 @@
                     <h2>Calvin Klein Jeans</h2>
                     <p>DAD - Jeans relaxed fit - denim dark</p>
                     <p>Pris: 1.345,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="9">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -107,6 +116,7 @@
                     <h2>Levi's®</h2>
                     <p>555 RELAXED STRAIGHT - Jeans straight leg - wish you would</p>
                     <p>Pris: 969,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="10">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -114,6 +124,7 @@
                     <h2>GANT</h2>
                     <p>PRINTED ARCHIVE SHIELD - T-shirt - bas - black</p>
                     <p>Pris: 359,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="11">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -121,6 +132,7 @@
                     <h2>Wrangler</h2>
                     <p>BLOGO - T-shirt med print - navy</p>
                     <p>Pris: 299,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="12">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -128,6 +140,7 @@
                     <h2>GAP</h2>
                     <p>EVERYDAY SOFT ORIGINAL ARCH - T-shirt med print - true black</p>
                     <p>Pris: 167,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="13">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -135,6 +148,7 @@
                     <h2>Produkt 14</h2>
                     <p>Beskrivning av produkt 14.</p>
                     <p>Pris: 105 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="14">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -142,6 +156,7 @@
                     <h2>Produkt 15</h2>
                     <p>Beskrivning av produkt 15.</p>
                     <p>Pris: 125 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="15">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -149,6 +164,7 @@
                     <h2>Bershka</h2>
                     <p>TEXTURED STRIPED SHORT SLEEVE - T-shirt med print - camel</p>
                     <p>Pris: 229,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="16">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -156,6 +172,7 @@
                     <h2>GAP</h2>
                     <p>TONAL ARCHIVE SHIELD ZIP HOODIE - Tröja med dragkedja - black</p>
                     <p>Pris: 1.500,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="17">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -163,6 +180,7 @@
                     <h2>Wrangler</h2>
                     <p>LS SIGN OFF - Sweatshirt - worn white</p>
                     <p>Pris: 349,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="18">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -170,6 +188,7 @@
                     <h2>Wrangler</h2>
                     <p>CREWNECK - Sweatshirt - scarab</p>
                     <p>Pris: 799,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="19">Lägg i varukorg</button>
                 </div>
                 <div class="product-item">
@@ -177,6 +196,7 @@
                     <h2>Levi's®</h2>
                     <p>RELAXED GRAPHIC CREW UNSIEX - Sweatshirt - blue</p>
                     <p>Pris: 416,00 kr</p>
+                    <br>
                     <button class="add-to-cart" data-product="20">Lägg i varukorg</button>
                 </div>
             </div>
@@ -184,12 +204,17 @@
     </main>
 
     <div id="shopping-cart-container" class="shopping-cart">
+        <br>
+        <br>
+        <br>
         <h2>Din Varukorg</h2>
         <div class="shopping-cart-items">
-            <!-- Cart items will be dynamically added here -->
         </div>
+        <br>
         <p>Total produkter: <span id="shopping-cart-total-items">0</span></p>
+        <br>
         <p>Totalt pris: <span id="shopping-cart-total-price">0 kr</span></p>
+          <br>
         <a href="checkout.html" class="shopping-cart-checkout">Gå till betalning</a>
         <button class="shopping-cart-close">Stäng</button>
     </div>
@@ -207,7 +232,7 @@
             const storedCart = localStorage.getItem('cart');
             if (storedCart) {
                 cart = JSON.parse(storedCart);
-                updateCart();  // Uppdatera varukorgen direkt vid sidladdning
+                updateCart(); 
             }
         });
     
@@ -233,7 +258,6 @@ const toast = document.getElementById('shopping-cart-toast');
             return;
         }
 
-        // Add product to cart
         const productIndex = cart.findIndex(item => item.id === productId);
         if (productIndex > -1) {
             cart[productIndex].quantity += 1;
@@ -244,7 +268,6 @@ const toast = document.getElementById('shopping-cart-toast');
         updateCart();
         showToast('Produkten har lagts till i varukorg');
         
-        // Visa varukorgen
         document.getElementById('shopping-cart-container').style.display = 'block';
     });
 });
@@ -258,9 +281,15 @@ const toast = document.getElementById('shopping-cart-toast');
                 itemElement.className = 'shopping-cart-items';
                 itemElement.innerHTML = `
                     <h3>${item.name}</h3>
+                      <br>
                     <p>Pris: ${item.price.toFixed(2)} kr</p>
+                      <br>
                     <label for="quantity${item.id}">Antal:</label>
+                      <br>
+                        <br>
                     <input type="number" id="quantity${item.id}" name="quantity" min="1" value="${item.quantity}" data-product="${item.id}">
+                      <br>
+                        <br>
                     <button class="remove-item" data-product="${item.id}">Ta bort</button>
                 `;
                 cartItems.appendChild(itemElement);
@@ -270,10 +299,8 @@ const toast = document.getElementById('shopping-cart-toast');
             totalPrice.innerText = `${totalAmount.toFixed(2)} kr`;
             cartCount.innerText = cart.length;
     
-            // Spara cart till localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
     
-            // Rensa localStorage om varukorg är tom
             if (cart.length === 0) {
                 localStorage.removeItem('cart');
             }
@@ -317,12 +344,11 @@ const toast = document.getElementById('shopping-cart-toast');
         
     
         function parsePrice(priceText) {
-            // Ta bort "Pris: " och " kr", ersätt punkt med komma och hantera tusentalsavgränsare
             return parseFloat(priceText
                 .replace('Pris: ', '')
                 .replace(' kr', '')
-                .replace(/\./g, '') // Ta bort tusentalsavgränsare
-                .replace(',', '.')); // Ersätt kommatecken med punkt för decimaler
+                .replace(/\./g, '')
+                .replace(',', '.'));
         }
 
         

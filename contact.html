@@ -9,53 +9,57 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="Gå till startsidan">
             <img src="img/logo.png" alt="Min Webshop Logo" class="logo-img">
             <span class="logo-text">Fashion Clothes</span>
         </a>
         
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <label for="menu-toggle" class="hamburger" aria-label="Meny">&#9776;</label>
         <nav>
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="products.html">Produkter</a></li>
-                <li><a href="contact.html">Kontakta oss</a></li>
-                <li><a href="map.html">Karta</a></li>
-                <li><a href="about.html">Om oss</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html" accesskey="h" aria-label="Hem">Hem</a></li>
+                <li><a href="products.html" accesskey="p" aria-label="Produkter">Produkter</a></li>
+                <li><a href="contact.html" accesskey="k" aria-label="Kontakta oss">Kontakta oss</a></li>
+                <li><a href="map.html" accesskey="m" aria-label="Karta">Karta</a></li>
+                <li><a href="about.html" accesskey="o" aria-label="Om oss">Om oss</a></li>
+                <li><a href="login.html" accesskey="l" aria-label="Login">Login</a></li>
                 <li>
-                    <a href="cart.html" class="cart-link">
-                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon">
+                    <a href="cart.html" class="cart-link" aria-label="Varukorg">
+                        <img src="img/cart-icon.png" alt="Varukorg" class="cart-icon" aria-labelledby="cart-count">
                         <span id="cart-count">0</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <label for="menu-toggle" class="close">&times;</label> <!-- Rätt placerad stängningsikon -->
+        <label for="menu-toggle" class="close" aria-label="Stäng meny">&times;</label>
     </header>
 
     <main>
-        <section>
+        <section id="contact">
             <h1>Kontakta oss</h1>
             <p>Om du har några frågor, tveka inte att kontakta oss!</p>
-            <form action="mailto:info@minwebshop.se" method="post" enctype="text/plain">
+            <form id="contact-form" action="mailto:info@minwebshop.se" method="post" enctype="text/plain">
                 <label for="name">Namn:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required aria-required="true" placeholder="Skriv ditt namn">
+                
                 <label for="email">E-post:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required aria-required="true" placeholder="Skriv din e-post">
+
                 <label for="message">Meddelande:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Skriv ditt meddelande"></textarea>
+
                 <button type="submit">Skicka</button>
             </form>
+            <p id="form-feedback" aria-live="polite"></p>
         </section>
     </main>
 
     <div class="social-media">
-        <a href="https://www.facebook.com/yourpage" target="_blank">
+        <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Följ oss på Facebook">
             <img src="img/facebook-icon.png" alt="Facebook" class="social-icon">
         </a>
-        <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Följ oss på Instagram">
             <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
         </a>
     </div>
@@ -69,13 +73,37 @@
         document.addEventListener('DOMContentLoaded', () => {
             const cartCount = document.getElementById('cart-count');
 
-            // Hämta varukorgens data från localStorage
             const storedCart = localStorage.getItem('cart');
             if (storedCart) {
                 const cart = JSON.parse(storedCart);
                 const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
                 cartCount.innerText = itemCount;
             }
+
+            const form = document.getElementById('contact-form');
+            const feedback = document.getElementById('form-feedback');
+            
+            form.addEventListener('submit', (e) => {
+                let valid = true;
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                if (name === '') {
+                    feedback.textContent = 'Vänligen ange ditt namn.';
+                    valid = false;
+                } else if (!email.includes('@')) {
+                    feedback.textContent = 'Vänligen ange en giltig e-postadress.';
+                    valid = false;
+                } else if (message === '') {
+                    feedback.textContent = 'Vänligen skriv ett meddelande.';
+                    valid = false;
+                }
+
+                if (!valid) {
+                    e.preventDefault();
+                }
+            });
         });
     </script>
 </body>
