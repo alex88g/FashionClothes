@@ -1,5 +1,5 @@
 [
-    {
+ {
         "id": "1",
         "name": "JDY",
         "price": 518,
@@ -92,17 +92,17 @@
     },
     {
         "id": "14",
-        "name": "Produkt 14",
-        "price": 105,
+        "name": "Bershka",
+        "price": 229,
         "img": "https://img01.ztat.net/outfit/c2e3694529954f7e92e81edb8bcee383/20b0a55a5ce747019157b34e409d2676.jpg?imwidth=1000",
-        "description": "Beskrivning av produkt 14."
+        "description": "TEXTURED STRIPED SHORT SLEEVE -Utan krage T-shirt med print - camel"
     },
     {
         "id": "15",
-        "name": "Produkt 15",
-        "price": 125,
+        "name": "GAP",
+        "price": 189,
         "img": "https://img01.ztat.net/article/spp-media-p1/1f1989ca09bf4a45857aaaf8d5abd61c/ea45a895d25e414b8c8a3bc5ba43041e.jpg?imwidth=1800",
-        "description": "Beskrivning av produkt 15."
+        "description": "EVERYDAY SOFT LOGO - T-shirt med print - walden green"
     },
     {
         "id": "16",
