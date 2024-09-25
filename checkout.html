@@ -41,9 +41,10 @@
             <h1>Betalning</h1>
 
           
-            <div id="error-message" aria-live="assertive" role="alert" style="display: none; color: #b4656f;">
+            <div id="error-message" class="alert" aria-live="assertive" role="alert" style="display: none; color: #ff0022;">
                 Vänligen fyll i alla obligatoriska fält.
             </div>
+            
 
             <form id="payment-form" aria-labelledby="checkout">
                 <div class="form-group">
@@ -117,10 +118,11 @@
                 paypalInfo.style.display = 'block';
             }
         });
+    
         document.getElementById('submit-button').addEventListener('click', function() {
             var paymentMethod = document.getElementById('payment').value;
             var valid = true;
-
+    
             if (paymentMethod === 'credit') {
                 var cardNumber = document.getElementById('card-number').value;
                 var expiryDate = document.getElementById('expiry-date').value;
@@ -136,21 +138,20 @@
             } else {
                 valid = false;
             }
-
+    
             if (valid) {
-            
                 document.getElementById('payment-form').style.display = 'none'; 
                 document.getElementById('thank-you-container').style.display = 'block';
             } else {
-             
                 const errorMessage = document.getElementById('error-message');
                 errorMessage.style.display = 'block';
+                showAlert(); // Anropa showAlert för att visa felmeddelandet
             }
         });
-
+    
         document.addEventListener('DOMContentLoaded', () => {
             const cartCount = document.getElementById('cart-count');
-
+    
             const storedCart = localStorage.getItem('cart');
             if (storedCart) {
                 const cart = JSON.parse(storedCart);
@@ -158,6 +159,20 @@
                 cartCount.innerText = itemCount;
             }
         });
+    
+        function showAlert() {
+            const alertBox = document.getElementById('error-message');
+            alertBox.classList.remove('hide'); 
+            alertBox.style.display = 'block'; 
+    
+            setTimeout(() => {
+                alertBox.classList.add('hide');
+                setTimeout(() => {
+                    alertBox.style.display = 'none'; 
+                }, 1000);
+            }, 5000); 
+        }
     </script>
+    
 </body>
 </html>
